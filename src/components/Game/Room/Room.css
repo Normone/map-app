@@ -1,0 +1,54 @@
+.room {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  position: relative;
+}
+.room .doors {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.room .doors > div {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  margin: auto;
+}
+.room .doors .close {
+  background-color: red;
+}
+.room .doors .open {
+  background-color: green;
+}
+.room .doors .north {
+  top: -5px;
+  left: 0;
+  right: 0;
+}
+.room .doors .east {
+  top: 0;
+  bottom: 0;
+  right: -5px;
+}
+.room .doors .south {
+  bottom: -5px;
+  left: 0;
+  right: 0;
+}
+.room .doors .west {
+  top: 0;
+  bottom: 0;
+  left: -5px;
+}
+.room .type {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.room .type div {
+  width: 100%;
+  height: 100%;
+}

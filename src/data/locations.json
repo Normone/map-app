@@ -1,0 +1,362 @@
+[
+    {   "id": 1,
+        "name": "forest",
+        "title": "Лес",
+        "rooms": [
+            {
+                "name": "Da1",
+                "id": "",
+                "coords": {
+                    "x": 1,
+                    "y": 1
+                },
+                "doors": [
+                    0,
+                    2,
+                    1,
+                    0
+                ],
+                "type": "forest"
+            },
+            {
+                "name": "Da2",
+                "id": "",
+                "coords": {
+                    "x": 2,
+                    "y": 1
+                },
+                "doors": [
+                    0,
+                    2,
+                    1,
+                    1
+                ],
+                "type": "forest"
+            },
+            {
+                "name": "Da3",
+                "id": "",
+                "coords": {
+                    "x": 1,
+                    "y": 2
+                },
+                "doors": [
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "type": "forest"
+            },
+            {
+                "name": "Da3",
+                "id": "",
+                "coords": {
+                    "x": 4,
+                    "y": 5
+                },
+                "doors": [
+                    1,
+                    1,
+                    1,
+                    1
+                ],
+                "type": "forest"
+            },
+            {
+                "name": "Da4",
+                "id": "",
+                "coords": {
+                    "x": 5,
+                    "y": 5
+                },
+                "doors": [
+                    1,
+                    1,
+                    1,
+                    1
+                ],
+                "type": "forest"
+            },
+            {
+                "name": "Da5",
+                "id": "",
+                "coords": {
+                    "x": 3,
+                    "y": 5
+                },
+                "doors": [
+                    1,
+                    1,
+                    1,
+                    1
+                ],
+                "type": "forest"
+            },
+            {
+                "name": "Da6",
+                "id": "",
+                "coords": {
+                    "x": 6,
+                    "y": 5
+                },
+                "doors": [
+                    1,
+                    1,
+                    1,
+                    1
+                ],
+                "type": "forest"
+            },
+            {
+                "name": "Da7",
+                "id": "",
+                "coords": {
+                    "x": 7,
+                    "y": 5
+                },
+                "doors": [
+                    1,
+                    1,
+                    1,
+                    1
+                ],
+                "type": "forest"
+            },
+            {
+                "name": "Da8",
+                "id": "",
+                "coords": {
+                    "x": 8,
+                    "y": 5
+                },
+                "doors": [
+                    1,
+                    1,
+                    1,
+                    1
+                ],
+                "type": "forest"
+            },
+            {
+                "name": "Da9",
+                "id": "",
+                "coords": {
+                    "x": 9,
+                    "y": 5
+                },
+                "doors": [
+                    1,
+                    1,
+                    1,
+                    1
+                ],
+                "type": "forest"
+            },
+            {
+                "name": "Da10",
+                "id": "",
+                "coords": {
+                    "x": 10,
+                    "y": 5
+                },
+                "doors": [
+                    1,
+                    2,
+                    1,
+                    1
+                ],
+                "type": "forest"
+            },
+            {
+                "name": "Da11",
+                "id": "",
+                "coords": {
+                    "x": 11,
+                    "y": 5
+                },
+                "doors": [
+                    1,
+                    1,
+                    1,
+                    1
+                ],
+                "type": "forest"
+            },
+            {
+                "name": "Da12",
+                "id": "",
+                "coords": {
+                    "x": 5,
+                    "y": 4
+                },
+                "doors": [
+                    1,
+                    1,
+                    1,
+                    1
+                ],
+                "type": "forest"
+            },
+            {
+                "name": "Da13",
+                "id": "",
+                "coords": {
+                    "x": 5,
+                    "y": 3
+                },
+                "doors": [
+                    1,
+                    1,
+                    1,
+                    1
+                ],
+                "type": "forest"
+            },
+            {
+                "name": "Da14",
+                "id": "",
+                "coords": {
+                    "x": 5,
+                    "y": 2
+                },
+                "doors": [
+                    1,
+                    1,
+                    1,
+                    1
+                ],
+                "type": "forest"
+            },
+            {
+                "name": "Da15",
+                "id": "",
+                "coords": {
+                    "x": 5,
+                    "y": 1
+                },
+                "doors": [
+                    1,
+                    1,
+                    1,
+                    1
+                ],
+                "type": "forest"
+            },
+            {
+                "name": "Da16",
+                "id": "",
+                "coords": {
+                    "x": 4,
+                    "y": 1
+                },
+                "doors": [
+                    1,
+                    1,
+                    1,
+                    1
+                ],
+                "type": "forest"
+            }
+        ],
+        "size": [22, 12]
+    },
+    {"id": 2,
+        "name": "forest2",
+        "title": "Лес 2",
+        "rooms": [
+            {
+                "name": "Da1",
+                "id": "",
+                "coords": {
+                    "x": 1,
+                    "y": 1
+                },
+                "doors": [
+                    0,
+                    2,
+                    1,
+                    0
+                ],
+                "type": "forest"
+            },
+            {
+                "name": "Da2",
+                "id": "",
+                "coords": {
+                    "x": 2,
+                    "y": 1
+                },
+                "doors": [
+                    0,
+                    2,
+                    1,
+                    1
+                ],
+                "type": "forest"
+            },
+            {
+                "name": "Da3",
+                "id": "",
+                "coords": {
+                    "x": 1,
+                    "y": 2
+                },
+                "doors": [
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "type": "forest"
+            },
+            {
+                "name": "Da3",
+                "id": "",
+                "coords": {
+                    "x": 4,
+                    "y": 5
+                },
+                "doors": [
+                    1,
+                    1,
+                    1,
+                    1
+                ],
+                "type": "forest"
+            },
+            {
+                "name": "Da4",
+                "id": "",
+                "coords": {
+                    "x": 5,
+                    "y": 5
+                },
+                "doors": [
+                    1,
+                    1,
+                    1,
+                    1
+                ],
+                "type": "forest"
+            },
+            {
+                "name": "Da5",
+                "id": "",
+                "coords": {
+                    "x": 3,
+                    "y": 5
+                },
+                "doors": [
+                    1,
+                    1,
+                    1,
+                    1
+                ],
+                "type": "forest"
+            }
+        ],
+        "size": [12, 12]
+    }
+    
+]

@@ -1,0 +1,33 @@
+[
+    {
+        "id": 1,
+        "title": "Приветствие",
+        "description": "Первое приветствие на пути к развитию",
+        "image": "#",
+        "position": {
+            "location": "forest",
+            "coords": {
+                "x": 4,
+                "y": 1
+            }
+        },
+        "canRetry": false,
+        "time": "always",
+        "conditions": "firstVar"
+    },
+    {
+        "id": 2,
+        "title": "Первое посещение города",
+        "description": "Первое посещение города на пути к развитию",
+        "image": "#",
+        "position": {
+            "location": "town",
+            "coords": {
+                "x": 4,
+                "y": 1
+            }
+        },
+        "canRetry": true,
+        "time": "always"
+    }
+]
