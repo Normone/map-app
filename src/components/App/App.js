@@ -6,7 +6,7 @@ import './App.css';
 import Map from '../Game/Map';
 
 import locationsData from '../../data/locations.json';
-import eventData from '../../data/events.json';
+import eventsData from '../../data/events.json';
 
 
 class App extends Component {
@@ -38,26 +38,66 @@ class App extends Component {
   handleEvent = () => {
     const {gameContext} = this.state;
 
+    // =-=-= Вариант с forEach без асинхронности -=-=-=
+
     // Поиск события, подходящего по условиям игрового контекста
-    eventData.forEach((event) => {
-      if (
-        event.position.location === gameContext.currentLocation.name &&
-        event.position.coords.x === gameContext.playerPosition.x &&
-        event.position.coords.y === gameContext.playerPosition.y &&
-        // Дополнительные условия
-        (event.canRetry || !gameContext.handledEvents.includes(event.id))
-      ) {
-        // Вызов события
+    // eventsData.forEach((event) => {
+    //   if (
+    //     event.position.location === gameContext.currentLocation.name &&
+    //     event.position.coords.x === gameContext.playerPosition.x &&
+    //     event.position.coords.y === gameContext.playerPosition.y &&
+    //     // Дополнительные условия
+    //     (event.canRetry || !gameContext.handledEvents.includes(event.id))
+    //   ) {
+    //     // Вызов события
+    //     console.log('Обработка события:', event);
+    //     // Добавление его в id в список когда-то запущенных
+    //     this.setState((prevState) => ({
+    //       gameContext: {
+    //         ...prevState.gameContext,
+    //         handledEvents: [...prevState.gameContext.handledEvents, event.id],
+    //       },
+    //     }));
+    //   }
+    // });
+
+    // =-=-=- Вариант с асинхронной функцией от GPT-4 =-=-=
+
+    // Функция, которая возвращает Promise и решает его после выполнения события
+    const processEvent = (event) => {
+      return new Promise((resolve) => {
         console.log('Обработка события:', event);
-        // Добавление его в id в список когда-то запущенных
-        this.setState((prevState) => ({
-          gameContext: {
-            ...prevState.gameContext,
-            handledEvents: [...prevState.gameContext.handledEvents, event.id],
-          },
-        }));
+        // Здесь должен быть ваш код для обработки события и изменения gameContext.eventIsExecuted на false
+        // ...
+        resolve();
+      });
+    };
+
+    // Асинхронная функция для обработки событий
+    const handleEvents = async (eventsData) => {
+      for (const event of eventsData) {
+        if (
+          event.position.location === gameContext.currentLocation.name &&
+          event.position.coords.x === gameContext.playerPosition.x &&
+          event.position.coords.y === gameContext.playerPosition.y &&
+          // Дополнительные условия
+          (event.canRetry || !gameContext.handledEvents.includes(event.id))
+        ) {
+          // Вызов события и ожидание его завершения
+          await processEvent(event);
+          // Добавление его id в список когда-то запущенных
+          this.setState((prevState) => ({
+            gameContext: {
+              ...prevState.gameContext,
+              handledEvents: [...prevState.gameContext.handledEvents, event.id],
+            },
+          }));
+        }
       }
-    });
+    };
+    // Вызов функции handleEvents
+    handleEvents(eventsData);
+
   };
   
 

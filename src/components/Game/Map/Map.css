@@ -5,6 +5,9 @@
   border: 1px solid black;
   border-radius: 10px;
   overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+  background-color: white;
 }
 .map .mapContainer {
   display: grid;
@@ -14,4 +17,32 @@
 .map .player {
   z-index: 2;
   background-image: url("../../../imgs/player3.svg");
+}
+
+.controlPanel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  width: 430px;
+  height: 110px;
+  border: 1px solid black;
+  border-top: none;
+  border-radius: 10px;
+  border-top-right-radius: unset;
+  border-top-left-radius: unset;
+  padding-top: 6px;
+  margin-top: -6px;
+  background-color: #f7f7f7;
+  position: absolute;
+  z-index: -1;
+}
+.controlPanel .key {
+  flex: 0 0 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  background-color: white;
 }
