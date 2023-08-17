@@ -3,19 +3,24 @@ import React, {Component} from 'react';
 
 
 import './App.css';
-import Map from '../Game/Map';
+import Interface from '../Game/Interface';
 
 import locationsData from '../../data/locations.json';
 import eventsData from '../../data/events.json';
 
 
+
+
+
 class App extends Component {
   constructor(props) {
     super(props);
+    this.childRef = React.createRef();
     this.state = {
 
       gameContext: {
         currentLocation: locationsData[0],
+        currentEvent: null,
         playerPosition: {x: 4, y: 5},
         handledEvents: [],
 
@@ -36,32 +41,10 @@ class App extends Component {
 
 
   handleEvent = () => {
+
+
+    // =-=-=- Вариант с асинхронной функцией =-=-=
     const {gameContext} = this.state;
-
-    // =-=-= Вариант с forEach без асинхронности -=-=-=
-
-    // Поиск события, подходящего по условиям игрового контекста
-    // eventsData.forEach((event) => {
-    //   if (
-    //     event.position.location === gameContext.currentLocation.name &&
-    //     event.position.coords.x === gameContext.playerPosition.x &&
-    //     event.position.coords.y === gameContext.playerPosition.y &&
-    //     // Дополнительные условия
-    //     (event.canRetry || !gameContext.handledEvents.includes(event.id))
-    //   ) {
-    //     // Вызов события
-    //     console.log('Обработка события:', event);
-    //     // Добавление его в id в список когда-то запущенных
-    //     this.setState((prevState) => ({
-    //       gameContext: {
-    //         ...prevState.gameContext,
-    //         handledEvents: [...prevState.gameContext.handledEvents, event.id],
-    //       },
-    //     }));
-    //   }
-    // });
-
-    // =-=-=- Вариант с асинхронной функцией от GPT-4 =-=-=
 
     // Функция, которая возвращает Promise и решает его после выполнения события
     const processEvent = (event) => {
@@ -116,11 +99,12 @@ class App extends Component {
     return (
       <div className="App">
 
-        <Map 
+        <Interface
+          ref={this.childRef}
           gameContext={this.state.gameContext}
           handleEvent={this.handleEvent}
           changePositionPlayer={this.changePositionPlayer}
-        ></Map>
+        ></Interface>
       </div>
     );
   }

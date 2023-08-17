@@ -13,7 +13,79 @@
         },
         "canRetry": false,
         "time": "always",
-        "conditions": "firstVar"
+        "conditions": "firstVar",
+        "content": {
+            "steps": [
+                {
+                    "text": "bla-bla-bla, bla-bla bla, bla 1",
+                    "options": [
+                        {
+                            "title": "Вариант 1",
+                            "condition": {
+                                "var": null,
+                                "item": null,
+                                "event": null,
+                                "some": null
+                            },
+                            "direction": 1
+                        },
+                        {
+                            "title": "Вариант 2",
+                            "condition": {
+                                "var": null,
+                                "item": null,
+                                "event": null,
+                                "some": null
+                            },
+                            "direction": 2
+                        }
+                    ]
+                },
+                {
+                    "text": "bla-bla-bla, bla-bla bla, bla 2",
+                    "options": [
+                        {
+                            "title": "Вариант 1",
+                            "condition": {
+                                "var": null,
+                                "item": null,
+                                "event": null,
+                                "some": null
+                            },
+                            "direction": 2
+                        }
+                    ]
+                },
+                {
+                    "text": "bla-bla-bla, bla-bla bla, bla 3",
+                    "options": [
+                        {
+                            "title": "Вариант 1",
+                            "condition": {
+                                "var": null,
+                                "item": null,
+                                "event": null,
+                                "some": null
+                            },
+                            "direction": 1,
+                            "end": true
+                        },
+                        {
+                            "title": "Вариант 2",
+                            "condition": {
+                                "var": null,
+                                "item": null,
+                                "event": null,
+                                "some": null
+                            },
+                            "direction": 2,
+                            "startEvent": 2,
+                            "end": true
+                        }
+                    ]
+                }
+            ]
+        }
     },
     {
         "id": 2,

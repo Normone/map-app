@@ -146,10 +146,13 @@ class Map extends Component {
 
         return (
             
-            <div>
-                <div class="map">
+            <div className="Map">
+                <div className="locationTitle">
+                    {currentLocation.title}
+                </div>
+                <div className="mapView">
                     <div 
-                    className="mapContainer"
+                    className="mapViewContainer"
                     style={{ 
                         marginLeft: this.state.marginLeft, 
                         marginTop: this.state.marginTop, 

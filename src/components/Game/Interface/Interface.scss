@@ -1,0 +1,29 @@
+.Interface {
+    display: grid;
+    grid-template-columns: 432px auto;
+    grid-template-rows: 50px 550px auto;
+
+    .topControlPanel {
+        width: 100%;
+        height: 50px;
+        background-color: gray;
+        grid-column: 2/3;
+        grid-row: 1/1;
+    }
+    .bottomControlPanel {
+        width: 100%;
+        height: 50px;
+        background-color: gray;
+        grid-column: 1/3;
+        grid-row: 3/3;
+    }
+    .contentPanel {
+        width: 500px;
+        height: auto;
+        background-color: aliceblue;
+        grid-column: 2/3;
+        grid-row: 2/2;
+        display: flex;
+        justify-self: flex-end;
+    }
+}
